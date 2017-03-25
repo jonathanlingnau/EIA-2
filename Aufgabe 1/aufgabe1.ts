@@ -1,7 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
+
 let n: number = 5;
 let c: string;
 let x: number = 0;
 let y: number = 0;
+
+
+
+
 
 for (let i: number = 0; i < n; i++) {
     y += (i == 2) ? 20 : 50;
@@ -25,10 +31,8 @@ for (let i: number = 0; i < n; i++) {
             break;
     }
 }
-
-
-
-function placeDiv(_color: string, _x: number, _y: number, _width: number, _height: number): void {
+    
+    function placeDiv(_color: string, _x: number, _y: number, _width: number, _height: number): void {
     let div: HTMLDivElement = document.createElement("div");
     document.body.appendChild(div);
 
@@ -44,3 +48,6 @@ function placeDiv(_color: string, _x: number, _y: number, _width: number, _heigh
     s.left = _x + "px";
     s.top = _y + "px";
 }
+
+});
+
