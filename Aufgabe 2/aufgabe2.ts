@@ -18,18 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
             if (i % 2 == 0) { 
                 c = "#ffffff"; }
             
-            if (i % 2 == 1) {
+            else {
                 c = "#000000"; }
          }   
         
-         if (zeile % 2 == 1) {
+         else {
        
             if (i % 2 == 1) { 
                 c = "#ffffff"; }
             
-            if (i % 2 == 0) {
+            else {
                 c = "#000000"; }
-         }
+        } 
            
         
         

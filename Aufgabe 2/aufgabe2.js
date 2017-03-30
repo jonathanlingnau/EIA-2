@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
             if (i_1 % 2 == 0) {
                 c = "#ffffff";
             }
-            if (i_1 % 2 == 1) {
+            else {
                 c = "#000000";
             }
         }
-        if (zeile % 2 == 1) {
+        else {
             if (i_1 % 2 == 1) {
                 c = "#ffffff";
             }
-            if (i_1 % 2 == 0) {
+            else {
                 c = "#000000";
             }
         }
