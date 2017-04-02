@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let n: number = 64;
     let x: number = 1;
     let c: string;
+    let d: string;
     let zeile: number = 0;
     
     
@@ -16,25 +17,33 @@ document.addEventListener('DOMContentLoaded', function () {
         if (zeile % 2 == 0) {
        
             if (i % 2 == 0) { 
-                c = "#ffffff"; }
+                c = "#ffffff";
+                d = "#000000"; }
             
             else {
-                c = "#000000"; }
+                c = "#000000";
+                d = "#ffffff"; }
          }   
         
          else {
        
             if (i % 2 == 1) { 
-                c = "#ffffff"; }
+                c = "#ffffff";
+                d = "#000000"; }
             
             else {
-                c = "#000000"; }
+                c = "#000000";
+                d = "#ffffff"; }
         } 
            
+        x = x * 2;
         
         
         
-        placeDiv(c);
+        
+        placeDiv(c,d);
+        
+       
         
 
     }
@@ -43,17 +52,21 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
-    function placeDiv(_color: string): void {
+    function placeDiv(_color: string, _fontColor: string ): void {
     let div: HTMLDivElement = document.createElement("div");
-    document.body.appendChild(div);
-
         
+    
+    div.textContent = x.toString();
+    document.body.appendChild(div);
+          
     
     let s: CSSStyleDeclaration = div.style;
     
         
     s.backgroundColor = _color;
-    div.className += "squares";
+    s.color = _fontColor;
+   
+        
 }
 
     
