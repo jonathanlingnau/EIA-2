@@ -1,3 +1,9 @@
+//Aufgabe: Aufgabe 2
+//Name: Jonathan Lingnau
+//Matrikel: 255645
+//Datum: 06.04.17
+//    
+//Hiermit versichere ich, dass ich diesen Code selbst und in Zusammenarbeit mit Leonie Storz geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
 document.addEventListener('DOMContentLoaded', function () {
     var i = 0;
     var n = 64;
