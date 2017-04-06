@@ -1,0 +1,47 @@
+/* Aufgabe: Aufgabe 3b
+Name: Jonathan Lingnau
+Matrikel: 255645
+Datum: 06.04.17
+	
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+*/
+
+
+body{
+	background-color: rgb(34,139,34);
+}
+
+
+img {
+    height: 180px;
+    margin: 80px 0 0 450px;
+    width: 110px;
+}
+
+
+
+#discard {
+    border: 1px solid black;
+    display: block;
+    height: 180px;
+    margin: -185px 0 0 650px;
+    position: relative;
+    width: 110px;
+    background-color: white;
+}
+
+#spielfeld{
+	border: 1px solid black;
+	height: 220px;
+	width: 70%;
+	margin: 60px 0 0 15%;
+	background-color:rgb(205,0,38)
+}
+
+
+
+
+
+
+
+
