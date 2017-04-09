@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < 9; i++){
     getDivs[i].addEventListener("click",function () {
     if(divClicked==false){
-        getDivs[i].style.borderColor = "rgb(255,0,0)";
+        getDivs[i].style.border = "1px solid rgb(0,255,0)";
         divClicked = true; 
     }  
     else {

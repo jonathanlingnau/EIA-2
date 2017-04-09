@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var _loop_1 = function(i_2) {
         getDivs[i_2].addEventListener("click", function () {
             if (divClicked == false) {
-                getDivs[i_2].style.borderColor = "rgb(255,0,0)";
+                getDivs[i_2].style.border = "1px solid rgb(0,255,0)";
                 divClicked = true;
             }
             else {
