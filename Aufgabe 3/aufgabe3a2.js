@@ -47,7 +47,25 @@ document.addEventListener('DOMContentLoaded', function () {
         s.color = _fontColor;
     }
     var getDivs = document.getElementsByTagName("div");
-    for (var i_2 = 0; i_2 < 8; i_2++) {
+    var divClicked = false;
+    var _loop_1 = function(i_2) {
+        getDivs[i_2].addEventListener("click", function () {
+            if (divClicked == false) {
+                getDivs[i_2].style.borderColor = "rgb(255,0,0)";
+                divClicked = true;
+            }
+            else {
+                getDivs[i_2].style.borderColor = "black";
+                divClicked = false;
+            }
+        });
+        for (var i_3 = 0; i_3 < 8; i_3++) {
+            x += Number(getDivs[i_3].textContent);
+            document.getElementById("sumWindow").textContent = "Dezimal: " + x.toString() + " ; " + "Hexadezimal: " + x.toString(16);
+        }
+    };
+    for (var i_2 = 0; i_2 < 9; i_2++) {
+        _loop_1(i_2);
     }
     document.addEventListener("mousemove", function (Event) {
         document.getElementById("sumWindow").style.left = (Event.clientX + 15) + "px";

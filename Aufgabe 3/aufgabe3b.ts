@@ -3,7 +3,7 @@
 //Matrikel: 255645
 //Datum: 06.04.17
 //    
-//Hiermit versichere ich, dass ich diesen Code selbst und in Zusammenarbeit mit Leonie Storz geschrieben habe.
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.
 // Er wurde nicht kopiert und auch nicht diktiert.
 
 document.addEventListener('DOMContentLoaded', function () {  

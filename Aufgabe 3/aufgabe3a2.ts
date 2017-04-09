@@ -79,9 +79,25 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
     let getDivs: NodeListOf <HTMLElement> = document.getElementsByTagName("div");
+    let divClicked:boolean = false;
     
+    for (let i = 0; i < 9; i++){
+    getDivs[i].addEventListener("click",function () {
+    if(divClicked==false){
+        getDivs[i].style.borderColor = "rgb(255,0,0)";
+        divClicked = true; 
+    }  
+    else {
+        getDivs[i].style.borderColor = "black";
+        divClicked = false; 
+    }
+    }); 
+        
     for (let i = 0; i < 8; i++){
-//    getDivs[i].addEventListener("click", )  
+        x += Number(getDivs[i].textContent);
+        document.getElementById("sumWindow").textContent = "Dezimal: "+ x.toString() + " ; " + "Hexadezimal: " + x.toString(16);
+        
+    }
     }
     
     
