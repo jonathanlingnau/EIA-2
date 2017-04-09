@@ -16,6 +16,13 @@ div {
     overflow: auto;
 }
 
-
+#sumWindow {
+	position:absolute;
+	z-index: 2;
+	width: 222px;
+	background-color:rgb(47,79,79);	
+	font-color:white;
+	display: none;
+}
 
 

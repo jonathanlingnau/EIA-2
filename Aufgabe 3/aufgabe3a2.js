@@ -1,3 +1,9 @@
+//Aufgabe: Aufgabe 2
+//Name: Jonathan Lingnau
+//Matrikel: 255645
+//Datum: 06.04.17
+//    
+//Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
 document.addEventListener('DOMContentLoaded', function () {
     var i = 0;
     var n = 64;
@@ -40,5 +46,12 @@ document.addEventListener('DOMContentLoaded', function () {
         s.backgroundColor = _color;
         s.color = _fontColor;
     }
+    var getDivs = document.getElementsByTagName("div");
+    for (var i_2 = 0; i_2 < 8; i_2++) {
+    }
+    document.addEventListener("mousemove", function (Event) {
+        document.getElementById("sumWindow").style.left = (Event.clientX + 15) + "px";
+        document.getElementById("sumWindow").style.top = (Event.clientY + 20) + "px";
+    });
 });
-//# sourceMappingURL=aufgabe3a.js.map
+//# sourceMappingURL=aufgabe3a2.js.map
