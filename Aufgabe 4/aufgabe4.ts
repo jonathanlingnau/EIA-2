@@ -1,9 +1,8 @@
-namespace L4_Canvas {
+namespace Canvas {
     window.addEventListener("load", init);
     let crc2: CanvasRenderingContext2D;
 
     function init(_event: Event): void {
-        console.log("Hallo");
         let canvas: HTMLCanvasElement;
         canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
