@@ -9,27 +9,50 @@ namespace Canvas {
 
         crc2 = canvas.getContext("2d");
         console.log(crc2);
+        
+        //Himmel
 
-        crc2.fillStyle = "#0000ff";
+        crc2.fillStyle = "#87CEEB";
         crc2.fillRect(0, 0, canvas.width, canvas.height);
 
-        crc2.moveTo(0, 0);
-        crc2.lineTo(canvas.width, canvas.height);
-        crc2.stroke();
-
-        drawTriangle(200, 150, "#00ff00", "#ff0000");
+        //Wiese
+        
+        crc2.fillStyle = "#00FF7F";
+        crc2.fillRect(0, 420, 1270, 420);
+        
+        drawMountain(250, 420, "#a9a9a9");
+        drawMountain(100, 420, "#808080");
+        drawBlume(350, 1100, "#800000");
+        
     }
 
-    function drawTriangle(_x: number, _y: number, _strokeColor: string, _fillColor: string): void {
+    function drawMountain(_x: number, _y: number, _fillColor: string): void {
         crc2.beginPath();
         crc2.fillStyle = _fillColor;
-        crc2.strokeStyle = _strokeColor;
-        crc2.moveTo(_x - 10, _y + 10);
-        crc2.lineTo(_x, _y - 10);
-        crc2.lineTo(_x + 10, _y + 10);
+        crc2.moveTo(_x - 200, _y );
+        crc2.lineTo(_x, _y - 300);
+        crc2.lineTo(_x + 200, _y);
         crc2.closePath();
         crc2.fill();
-        crc2.stroke();
-        //draw a triangle around the coordinates (_x, _y);
+
     }
+    
+    function drawBlume(_x: number, _y: number, _fillColor: string): void {
+        crc2.beginPath();
+        crc2.fillStyle = _fillColor;
+        crc2.fillRect(0, 420, 1270, 420);
+//        crc2.moveTo(_x - 10, _y );
+//        crc2.lineTo(_x + 10, _y - 50);
+//        crc2.lineTo(_x + 20, _y - 50);
+//        crc2.lineTo(_x + 20, _y);
+//        crc2.closePath();
+//        crc2.fill();
+        
+    
+    
+    }
+    
+    
+    
+    
 }
