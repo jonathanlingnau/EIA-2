@@ -64,4 +64,4 @@ document.addEventListener('DOMContentLoaded', function () {
     //    });
     //    
 });
-//# sourceMappingURL=aufgabe3a.js.map
+//# sourceMappingURL=aufgabe3A.js.map
