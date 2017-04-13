@@ -1,9 +1,8 @@
-var L4_Canvas;
-(function (L4_Canvas) {
+var Canvas;
+(function (Canvas) {
     window.addEventListener("load", init);
     var crc2;
     function init(_event) {
-        console.log("Hallo");
         var canvas;
         canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
@@ -28,5 +27,5 @@ var L4_Canvas;
         crc2.stroke();
         //draw a triangle around the coordinates (_x, _y);
     }
-})(L4_Canvas || (L4_Canvas = {}));
+})(Canvas || (Canvas = {}));
 //# sourceMappingURL=aufgabe4.js.map
