@@ -27,7 +27,7 @@ namespace Canvas {
         drawSun(970, 100);
         drawMountain(250, 420, "#a9a9a9");
         drawCloud(180, 240);
-        drawMountain(100, 420, "#808080");
+        drawMountain(100, 420, "#696969");
         drawCloud(850, 100);
         
         
