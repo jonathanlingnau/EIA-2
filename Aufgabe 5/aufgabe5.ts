@@ -1,3 +1,10 @@
+//Aufgabe: Aufgabe 4
+//Name: Jonathan Lingnau
+//Matrikel: 255645
+//Datum: 06.04.17
+//    
+//Hiermit versichere ich, dass ich diesen Code selbst und in zusammenarbeit mit Leonie Storz geschrieben habe. 
+//Er wurde nicht kopiert und auch nicht diktiert.
 namespace Canvas {
     window.addEventListener("load", init);
     let crc2: CanvasRenderingContext2D;
@@ -9,6 +16,11 @@ namespace Canvas {
     let x: number[] = [];
     let y: number[] = [];
     let n: number = 10;
+    
+    let elem = document.getElementsByTagName("canvas")[0]
+    
+    elem.addEventListener("click", addBee);
+    elem.addEventListener("touchstart", addBee);
 
     function init(_event: Event): void {
         
@@ -85,7 +97,9 @@ namespace Canvas {
         drawTulip(x, y, c);
  }
         
-        drawTree(1100, 580) ;  
+        drawTree(1100, 580) 
+        
+        drawBienenkorb(910, 515);  
         
  ImageData = crc2.getImageData(0, 0, 1270, 720);
        
@@ -130,7 +144,7 @@ namespace Canvas {
             if (y[i] > canvas.height) {
                 y[i] = 0; }
             
-            drawObject(x[i], y[i]);
+            drawBee(x[i], y[i]);
         }
             
             
@@ -138,10 +152,74 @@ namespace Canvas {
         window.setTimeout(animate, 20);
 }
     
-    function drawObject(_x: number, _y: number): void {
+    function addBee (){
+        x.push(900);
+        y.push(550);
+        n++;
+    }
+    
+    function drawBienenkorb  (_x: number, _y: number): void {
+         
+        crc2.beginPath();
+        crc2.fillStyle = "#A0522D";
+         
+        crc2.arc(_x,_y, 26, 0, 2 * Math.PI);
+        crc2.moveTo(_x,_y - 10)
+        crc2.arc(_x + 23,_y, 10, 0, 2 * Math.PI);
+        crc2.moveTo(_x,_y)
+        crc2.arc(_x + 23,_y + 20, 10, 0, 2 * Math.PI);
+        crc2.moveTo(_x,_y  + 4)
+        crc2.arc(_x + 23,_y + 41, 10, 0, 2 * Math.PI);
+        crc2.arc(_x - 25,_y + 41, 10, 0, 2 * Math.PI);
+        crc2.arc(_x - 25,_y + 20, 10, 0, 2 * Math.PI);
+        crc2.arc(_x - 25,_y, 10, 0, 2 * Math.PI);
+        crc2.fillRect(_x - 26, _y + 6, 51, 45);
+        
+        crc2.fill();
+         
         crc2.beginPath();
         crc2.fillStyle = "#000000";
-        crc2.fillRect(_x, _y, 35, 20);
+         
+        crc2.arc(_x - 5,_y + 33, 10, 0, 2 * Math.PI); 
+         
+        crc2.closePath();
+        crc2.fill();
+    }
+
+    
+     function drawBee(_x: number, _y: number): void {
+        
+        crc2.beginPath();
+        crc2.strokeStyle = "#000000";
+        crc2.fillStyle = "#000000";
+        crc2.arc(_x,_y, 7, 0, 2 * Math.PI);
+        crc2.arc(_x - 8 ,_y - 3, 4, 0, 2 * Math.PI);
+        crc2.moveTo(_x, _y);
+        crc2.lineTo(_x + 13, _y + 3);
+        crc2.stroke();
+        crc2.fill();
+        
+        crc2.beginPath();
+        crc2.fillStyle = " #FFFF00";
+        crc2.rect(_x - 6, _y - 4, 2.5, 9);
+        crc2.rect(_x - 2, _y - 6, 2.5, 13);
+        crc2.rect(_x + 2, _y - 4, 2.5, 10);
+        
+             
+        crc2.stroke;
+        crc2.fill();
+        
+        
+        crc2.beginPath();
+        crc2.fillStyle = "#aFEEEE";
+        crc2.arc(_x - 4, _y - 15, 10, 0, 1.5);
+        crc2.moveTo(_x,_y);
+        crc2.arc(_x - 1, _y - 10, 10, 0, 1.5);
+
+
+        crc2.closePath();
+        crc2.fill();
+        
 }
 
     function drawMountain(_x: number, _y: number, _fillColor: string): void {
