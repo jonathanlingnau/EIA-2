@@ -30,10 +30,44 @@ var StudiVZ;
             sex: parseInt(inputArray[4]) == 0,
             comment: (inputArray[5])
         };
-        return "Hier fehlt noch der richtige Code...";
+        var sex;
+        if (parseInt(inputArray[4]) == 0) {
+            sex = "weiblich";
+        }
+        else {
+            sex = "männlich";
+        }
+        if (inputArray.length <= 5) {
+            return "Die Eingabe ist nicht vollständig.";
+        }
+        if (isNaN(parseInt(inputArray[0]))) {
+            return "Bitte geben Sie eine gültige Martikelnummer ein.";
+        }
+        if (isNaN(parseInt(inputArray[4]))) {
+            return "Bitte geben Sie für weiblich die Zahl 0 und für männlich die Zahl 1 an.";
+        }
+        if (isNaN(parseInt(inputArray[3]))) {
+            return "Bitte geben Sie ein gültiges Alter an.";
+        }
+        students.push(s);
+        return "Student " + "/n" + "Name: " + s.name + "/nVorname: " + s.firstname + "/nMatrikelnummer: " + s.matrikel + "/nAlter: " + s.age + "Jahre" + "/nGeschlecht: " + sex + "/nKommentar: " + s.comment + "/nwurde erfolgreich gespeichert";
     }
     function queryData(_matrikel) {
-        return "Hier fehlt noch der richtige Code...";
+        for (var i = 0; i < students.length; i++) {
+            if (students[i].matrikel == _matrikel) {
+                var sex = void 0;
+                if (students[i].sex == false) {
+                    sex = "männlich";
+                }
+                else {
+                    sex = "weiblich";
+                }
+                return "Folgende Daten wurden gefunden: " + "/n" + "Matrikelnummer: " + students[i].matrikel + "/n" + "Name: " + students[i].name + "/nVorname: " + students[i].firstname + "/nAlter: " + students[i].age + "Jahre" + "/nGeschlecht: " + sex + "/nKommentar: " + students[i].comment;
+            }
+            else {
+                return "Kein Eintrag vorhanden.";
+            }
+        }
     }
 })(StudiVZ || (StudiVZ = {}));
 //# sourceMappingURL=aufgabe6b.js.map
