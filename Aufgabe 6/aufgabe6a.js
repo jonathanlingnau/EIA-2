@@ -67,7 +67,7 @@ var Canvas;
         ImageData = crc2.getImageData(0, 0, 1270, 720);
         //  Biene
         for (var i = 0; i < n; i++) {
-            var b = { x: 900, y: 550, color: "#FFFF00" };
+            var b = { x: 900, y: 550, color: "#FFFF00", pollen: "#FFD700" };
             //x[i] = 900;
             //y[i] = 550;
             bees[i] = b;
@@ -99,10 +99,7 @@ var Canvas;
         window.setTimeout(animate, 20);
     }
     function addBee() {
-        var b = { x: 900, y: 550, color: "#FFFF00" };
-        if (n % 2 == 0) {
-            b.color = "#FFD700";
-        }
+        bees.push({ x: 900, y: 550, color: "#FFFF00", pollen: "#FFD700" });
         n++;
     }
     function drawBienenkorb(_x, _y) {
@@ -150,6 +147,9 @@ var Canvas;
         crc2.arc(_b.x - 1, _b.y - 10, 10, 0, 1.5);
         crc2.closePath();
         crc2.fill();
+        //Pollen
+        crc2.fillStyle = _b.pollen;
+        crc2.fillRect(_b.x - 3, _b.y + 5, 5, 5);
     }
     function drawMountain(_x, _y, _fillColor) {
         crc2.beginPath();

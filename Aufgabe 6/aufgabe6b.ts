@@ -69,7 +69,7 @@ namespace StudiVZ {
         
         students.push(s);
         
-        return "Student " + "/n" + "Name: " + s.name + "/nVorname: " + s.firstname + "/nMatrikelnummer: " + s.matrikel + "/nAlter: " + s.age + "Jahre" + "/nGeschlecht: " + sex + "/nKommentar: " + s.comment +  "/nwurde erfolgreich gespeichert";
+        return "Student " + "\n" + "\n" + "Name: " + s.name + "\nVorname: " + s.firstname + "\nMatrikelnummer: " + s.matrikel + "\nAlter: " + s.age + " Jahre" + "\nGeschlecht: " + sex + "\nKommentar: " + s.comment + "\n" +  "\nwurde erfolgreich gespeichert";
     }
     function queryData(_matrikel: number): string {
         
@@ -82,7 +82,7 @@ namespace StudiVZ {
             else {
                 sex = "weiblich";
                 }
-            return "Folgende Daten wurden gefunden: " + "/n" + "Matrikelnummer: " + students[i].matrikel + "/n" + "Name: " + students[i].name + "/nVorname: " + students[i].firstname + "/nAlter: " + students[i].age + "Jahre" + "/nGeschlecht: " + sex + "/nKommentar: " + students[i].comment;
+            return "Folgende Daten wurden gefunden: " + "\n" + "\n" + "Matrikelnummer: " + students[i].matrikel + "\n" + "Name: " + students[i].name + "\nVorname: " + students[i].firstname + "\nAlter: " + students[i].age + "Jahre" + "\nGeschlecht: " + sex + "\nKommentar: " + students[i].comment;
             } 
             else {return "Kein Eintrag vorhanden."}
         }

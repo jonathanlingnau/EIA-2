@@ -18,6 +18,8 @@ namespace Canvas {
         x: number;
         y: number;
         color: string;
+        pollen: string;
+        
     }
     let bees: Bee[] = [];
     let n: number = 10;
@@ -116,7 +118,7 @@ namespace Canvas {
         
 
         for (let i: number = 0; i < n; i++) {
-            let b: Bee = {x: 900, y: 550, color: "#FFFF00"};
+            let b: Bee = {x: 900, y: 550, color: "#FFFF00", pollen: "#FFD700"};
             //x[i] = 900;
             //y[i] = 550;
             bees[i] = b;
@@ -162,9 +164,7 @@ namespace Canvas {
 }
     
     function addBee () {
-        let b: Bee = {x: 900, y: 550, color: "#FFFF00"};
-        if (n % 2 == 0) {
-        b.color = "#FFD700"; }
+        bees.push({ x: 900, y: 550, color: "#FFFF00", pollen: "#FFD700"});
         n++;
     }
     
@@ -229,6 +229,10 @@ namespace Canvas {
 
         crc2.closePath();
         crc2.fill();
+         
+        //Pollen
+         crc2.fillStyle = _b.pollen;
+        crc2.fillRect(_b.x - 3, _b.y + 5, 5, 5);
         
 }
 
