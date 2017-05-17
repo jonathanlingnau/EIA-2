@@ -62,9 +62,17 @@ var Classes_A7;
             else
                 f.drawTulip();
         }
-        var fixedFlower = new Classes_A7.Flower(50, 50, "#000000");
-        fixedFlower.drawTulip();
-        flowers.push(fixedFlower);
+        for (var i = 0; i < 10; i++) {
+            var y = 0;
+            var x = 0;
+            var color = "";
+            var fixedFlower = new Classes_A7.Flower(x, y, color);
+            fixedFlower.setRandomPosition();
+            fixedFlower.setRandomColor();
+            fixedFlower.drawTulip();
+            flowers.push(fixedFlower);
+        }
+        console.log(flowers);
         drawTree(1100, 580);
         drawBienenkorb(910, 515);
         ImageData = Classes_A7.crc2.getImageData(0, 0, 1270, 720);

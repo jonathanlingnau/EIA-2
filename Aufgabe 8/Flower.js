@@ -14,8 +14,8 @@ var Classes_A7;
             this.setRandomColor();
             _color = this.color;
             this.setRandomPosition();
-            //            _x = this.x;
-            //            _y = this.y;
+            _x = this.x;
+            _y = this.y;
         }
         Flower.prototype.drawFlower = function () {
             //Stiel

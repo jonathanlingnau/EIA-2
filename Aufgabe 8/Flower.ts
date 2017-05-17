@@ -6,20 +6,17 @@
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
 
-namespace Classes_A7 {
-    export class Flower {
-        x: number;
-        y: number;
-        color: string;
+namespace Inheritance_A8 {
+    export class Flower extends MovingShape {
 
         constructor(_x: number, _y: number, _color: string) {
-            console.log("Hey, I'm Bob!");
+            super(_x, _y, _color);
 //            this.setRandomFlower();
             this.setRandomColor();
             _color = this.color;
             this.setRandomPosition();
-//            _x = this.x;
-//            _y = this.y;
+            _x = this.x;
+            _y = this.y;
         }
 
         drawFlower(): void {
@@ -138,15 +135,7 @@ namespace Classes_A7 {
             crc2.closePath();
         }
 
-        setRandomPosition(): void {
-            this.x = Math.round(Math.random() * 1250);
-            this.y = Math.round(Math.random() * 340 + 420);
-        }
-
-        setRandomColor(): void {
-            
-            this.color = "hsl(" + Math.round(Math.random() * 360) + ","  + "100%," +  "50%)";
-        }
+        
         
 //        setRandomFlower(): void {
 //            

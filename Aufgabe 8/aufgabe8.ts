@@ -5,7 +5,7 @@
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-namespace Classes_A7 {
+namespace Inheritance_A8 {
     window.addEventListener("load", init);
     export let crc2: CanvasRenderingContext2D;
     let canvas: HTMLCanvasElement;
@@ -92,17 +92,9 @@ namespace Classes_A7 {
                 
         f.drawTulip();}
         
-        for (let i: number = 0; i < 10; i++) { 
-        let y: number = 0;
-        let x: number = 0;
-        let color: string = "";    
-        let fixedFlower: Flower = new Flower(x, y, color);
-        fixedFlower.setRandomPosition();
-        fixedFlower.setRandomColor();
+        let fixedFlower: Flower = new Flower(50, 50, "#000000");
         fixedFlower.drawTulip();
         flowers.push(fixedFlower);
-        }
-        console.log(flowers);
         
         drawTree(1100, 580);
         
