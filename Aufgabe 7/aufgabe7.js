@@ -14,10 +14,10 @@ var Classes_A7;
     var n = 10;
     var flowers = [];
     var flowerNumber = Math.round(Math.random() * 300);
-    canvas.addEventListener("click", addBee);
-    canvas.addEventListener("touchstart", addBee);
     function init(_event) {
         canvas = document.getElementsByTagName("canvas")[0];
+        canvas.addEventListener("click", addBee);
+        canvas.addEventListener("touchstart", addBee);
         console.log(canvas);
         Classes_A7.crc2 = canvas.getContext("2d");
         console.log(Classes_A7.crc2);
@@ -76,7 +76,7 @@ var Classes_A7;
         drawTree(1100, 580);
         drawBienenkorb(910, 515);
         ImageData = Classes_A7.crc2.getImageData(0, 0, 1270, 720);
-        //  Biene
+        // en        
         for (var i = 0; i < n; i++) {
             var b = new Classes_A7.Bee(900, 550, "#FFFF00", "#FFD700");
             bees[i] = b;
@@ -92,8 +92,7 @@ var Classes_A7;
         }
         //        for (let i: number = 0; i < flowers.length; i++) {
         //        let f: Flower = flowers[i];
-        //        f.drawFlower();
-        //        }
+        //        f.draw     }
         window.setTimeout(animate, 20);
     }
     function addBee(_event) {

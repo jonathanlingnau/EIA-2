@@ -27,7 +27,7 @@ var Classes_A7;
             Classes_A7.crc2.closePath();
             Classes_A7.crc2.fillStyle = "#008000";
             Classes_A7.crc2.fill();
-            //Blatt rechts
+            //Blatt rech    
             Classes_A7.crc2.beginPath();
             Classes_A7.crc2.moveTo(this.x + 10, this.y - 70);
             Classes_A7.crc2.lineTo(this.x + 10, this.y - 70);
@@ -37,7 +37,7 @@ var Classes_A7;
             //          crc2.lineWidth = 1;
             Classes_A7.crc2.lineJoin = "round";
             Classes_A7.crc2.fill();
-            //Blatt oben
+            //Blatt ob    
             Classes_A7.crc2.beginPath();
             Classes_A7.crc2.moveTo(this.x + 15, this.y - 70);
             Classes_A7.crc2.lineTo(this.x + 3, this.y - 70);
@@ -47,7 +47,7 @@ var Classes_A7;
             //          crc2.lineWidth = 1;
             Classes_A7.crc2.lineJoin = "round";
             Classes_A7.crc2.fill();
-            //Blatt links
+            //Blatt lin    
             Classes_A7.crc2.beginPath();
             Classes_A7.crc2.moveTo(this.x + 5, this.y - 75);
             Classes_A7.crc2.lineTo(this.x + 15, this.y - 70);
@@ -57,7 +57,7 @@ var Classes_A7;
             //          crc2.lineWidth = 1;
             Classes_A7.crc2.lineJoin = "round";
             Classes_A7.crc2.fill();
-            //Blatt unten
+            //Blatt unt    
             Classes_A7.crc2.beginPath();
             Classes_A7.crc2.moveTo(this.x + 5, this.y - 70);
             Classes_A7.crc2.lineTo(this.x + 15, this.y - 70);
@@ -67,7 +67,7 @@ var Classes_A7;
             //          crc2.lineWidth = 1;
             Classes_A7.crc2.lineJoin = "round";
             Classes_A7.crc2.fill();
-            //Mitte
+            //Mit    
             Classes_A7.crc2.beginPath();
             Classes_A7.crc2.moveTo(this.x + 15, this.y - 70);
             Classes_A7.crc2.arc(this.x + 10, this.y - 70, 8, Math.PI * 6 / 6, Math.PI * 1199 / 1200);

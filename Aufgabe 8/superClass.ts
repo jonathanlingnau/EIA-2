@@ -11,16 +11,16 @@ namespace Inheritance_A8 {
             _x = this.x;
             _y = this.y;
         }
-    
+
         setRandomPosition(): void {
             this.x = Math.round(Math.random() * 1250);
             this.y = Math.round(Math.random() * 340 + 420);
         }
 
         setRandomColor(): void {
-            
-            this.color = "hsl(" + Math.round(Math.random() * 360) + ","  + "100%," +  "50%)";
+
+            this.color = "hsl(" + Math.round(Math.random() * 360) + "," + "100%," + "50%)";
         }
-    
+
     }
 }

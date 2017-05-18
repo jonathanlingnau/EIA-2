@@ -68,7 +68,7 @@ var Inheritance_A8;
         drawTree(1100, 580);
         drawBienenkorb(910, 515);
         ImageData = Inheritance_A8.crc2.getImageData(0, 0, 1270, 720);
-        //  Biene
+        // en        
         for (var i = 0; i < n; i++) {
             var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
             bees[i] = b;
@@ -84,8 +84,7 @@ var Inheritance_A8;
         }
         //        for (let i: number = 0; i < flowers.length; i++) {
         //        let f: Flower = flowers[i];
-        //        f.drawFlower();
-        //        }
+        //        f.draw     }
         window.setTimeout(animate, 20);
     }
     function addBee(_event) {
