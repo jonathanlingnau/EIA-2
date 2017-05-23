@@ -1,7 +1,7 @@
-//Aufgabe: Aufgabe 7
+//Aufgabe: Aufgabe 8
 //Name: Jonathan Lingnau
 //Matrikel: 255645
-//Datum: 14.05.17
+//Datum: 21.05.17
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
@@ -10,17 +10,17 @@ var Inheritance_A8;
     window.addEventListener("load", init);
     var canvas;
     var ImageData;
-    var bees = [];
-    var n = 10;
-    var flowers = [];
+    Inheritance_A8.bees = [];
+    Inheritance_A8.n = 10;
+    Inheritance_A8.flowers = [];
     var flowerNumber = Math.round(Math.random() * 300);
-    canvas.addEventListener("click", addBee);
-    canvas.addEventListener("touchstart", addBee);
     function init(_event) {
         canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
         Inheritance_A8.crc2 = canvas.getContext("2d");
         console.log(Inheritance_A8.crc2);
+        canvas.addEventListener("click", addBee);
+        canvas.addEventListener("touchstart", addBee);
         //Himmel
         Inheritance_A8.crc2.fillStyle = "#87CEEB";
         Inheritance_A8.crc2.fillRect(0, 0, canvas.width, canvas.height);
@@ -49,37 +49,52 @@ var Inheritance_A8;
             y = Math.round(Math.random() * 250 + 470);
             drawBush(x, y, c);
         }
-        for (var i = 0; i < Math.round(Math.random() * 220); i++) {
+        for (var i = 0; i < Math.round(Math.random() * 200); i++) {
             var y = 0;
             var x = 0;
             var color = "";
             var f = new Inheritance_A8.Flower(x, y, color);
+            var t = new Inheritance_A8.tulip(x, y, color);
             f.setRandomPosition();
             f.setRandomColor();
             if (i % 2 == 0) {
                 f.drawFlower();
             }
             else
-                f.drawTulip();
+                t.drawTulip();
         }
-        var fixedFlower = new Inheritance_A8.Flower(50, 50, "#000000");
-        fixedFlower.drawTulip();
-        flowers.push(fixedFlower);
+        for (var i = 0; i < Math.round(Math.random() * 60); i++) {
+            var y = 0;
+            var x = 0;
+            var color = "";
+            var fixedFlower = new Inheritance_A8.Flower(x, y, color);
+            fixedFlower.setRandomPosition();
+            fixedFlower.setRandomColor();
+            fixedFlower.drawFlower();
+            Inheritance_A8.flowers.push(fixedFlower);
+        }
+        console.log(Inheritance_A8.flowers);
         drawTree(1100, 580);
         drawBienenkorb(910, 515);
         ImageData = Inheritance_A8.crc2.getImageData(0, 0, 1270, 720);
-        // en        
-        for (var i = 0; i < n; i++) {
-            var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
-            bees[i] = b;
+        // Biene      
+        for (var i = 0; i < Inheritance_A8.n; i++) {
+            if (i % 2 == 0) {
+                var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
+                Inheritance_A8.bees[i] = b;
+            }
+            else {
+                var h = new Inheritance_A8.honeyBee(900, 550, "#FFFF00", "#FFD700");
+                Inheritance_A8.bees[i] = h;
+            }
         }
         window.setTimeout(animate, 20);
     }
     function animate() {
         console.log("Animate called");
         Inheritance_A8.crc2.putImageData(ImageData, 0, 0);
-        for (var i = 0; i < n; i++) {
-            var b = bees[i];
+        for (var i = 0; i < Inheritance_A8.n; i++) {
+            var b = Inheritance_A8.bees[i];
             b.update();
         }
         //        for (let i: number = 0; i < flowers.length; i++) {
@@ -88,10 +103,19 @@ var Inheritance_A8;
         window.setTimeout(animate, 20);
     }
     function addBee(_event) {
-        var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
-        b.setPosition();
-        bees.push(b);
-        n++;
+        if (Inheritance_A8.n % 2 == 0) {
+            var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
+            Inheritance_A8.bees[Inheritance_A8.n] = b;
+            b.setPosition();
+            Inheritance_A8.bees.push(b);
+        }
+        else {
+            var h = new Inheritance_A8.honeyBee(900, 550, "#FFFF00", "#FFD700");
+            Inheritance_A8.bees[Inheritance_A8.n] = h;
+            h.setPosition();
+            Inheritance_A8.bees.push(h);
+        }
+        Inheritance_A8.n++;
     }
     function drawBienenkorb(_x, _y) {
         Inheritance_A8.crc2.beginPath();

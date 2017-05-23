@@ -1,7 +1,7 @@
-//Aufgabe: Aufgabe 7
+//Aufgabe: Aufgabe 8
 //Name: Jonathan Lingnau
 //Matrikel: 255645
-//Datum: 14.05.17
+//Datum: 21.05.17
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
@@ -12,15 +12,12 @@ namespace Inheritance_A8 {
 
     let ImageData: ImageData;
 
-    let bees: Bee[] = [];
-    let n: number = 10;
+    export let bees: superClassBee[] = [];
+    export let n: number = 10;
 
-    let flowers: Flower[] = [];
+    export let flowers: superClassFlower[] = [];
     let flowerNumber: number = Math.round(Math.random() * 300);
 
-
-    canvas.addEventListener("click", addBee);
-    canvas.addEventListener("touchstart", addBee);
 
     function init(_event: Event): void {
 
@@ -29,6 +26,9 @@ namespace Inheritance_A8 {
 
         crc2 = canvas.getContext("2d");
         console.log(crc2);
+
+        canvas.addEventListener("click", addBee);
+        canvas.addEventListener("touchstart", addBee);
 
         //Himmel
 
@@ -76,11 +76,12 @@ namespace Inheritance_A8 {
 
             drawBush(x, y, c);
         }
-        for (let i: number = 0; i < Math.round(Math.random() * 220); i++) {
+        for (let i: number = 0; i < Math.round(Math.random() * 200); i++) {
             let y: number = 0;
             let x: number = 0;
             let color: string = "";
             let f: Flower = new Flower(x, y, color);
+            let t: tulip = new tulip(x, y, color);
             f.setRandomPosition();
             f.setRandomColor();
 
@@ -91,12 +92,20 @@ namespace Inheritance_A8 {
 
             else
 
-                f.drawTulip();
+                t.drawTulip();
         }
 
-        let fixedFlower: Flower = new Flower(50, 50, "#000000");
-        fixedFlower.drawTulip();
-        flowers.push(fixedFlower);
+        for (let i: number = 0; i < Math.round(Math.random() * 60); i++) {
+            let y: number = 0;
+            let x: number = 0;
+            let color: string = "";
+            let fixedFlower: Flower = new Flower(x, y, color);
+            fixedFlower.setRandomPosition();
+            fixedFlower.setRandomColor();
+            fixedFlower.drawFlower();
+            flowers.push(fixedFlower);
+        }
+        console.log(flowers);
 
         drawTree(1100, 580);
 
@@ -104,10 +113,16 @@ namespace Inheritance_A8 {
 
         ImageData = crc2.getImageData(0, 0, 1270, 720);
 
-        // en        
+        // Biene      
         for (let i: number = 0; i < n; i++) {
-            let b: Bee = new Bee(900, 550, "#FFFF00", "#FFD700");
-            bees[i] = b;
+            if (i % 2 == 0) {
+                let b: Bee = new Bee(900, 550, "#FFFF00", "#FFD700");
+                bees[i] = b;
+            }
+            else {
+                let h: honeyBee = new honeyBee(900, 550, "#FFFF00", "#FFD700");
+                bees[i] = h;
+            }
         }
 
         window.setTimeout(animate, 20);
@@ -124,22 +139,34 @@ namespace Inheritance_A8 {
         crc2.putImageData(ImageData, 0, 0);
 
         for (let i: number = 0; i < n; i++) {
-            let b: Bee = bees[i];
+            let b: superClassBee = bees[i];
             b.update();
         }
         //        for (let i: number = 0; i < flowers.length; i++) {
         //        let f: Flower = flowers[i];
         //        f.draw     }
-            
-            
+
+
 
         window.setTimeout(animate, 20);
     }
 
     function addBee(_event: Event): void {
-        let b: Bee = new Bee(900, 550, "#FFFF00", "#FFD700");
-        b.setPosition();
-        bees.push(b);
+
+
+        if (n % 2 == 0) {
+            let b: Bee = new Bee(900, 550, "#FFFF00", "#FFD700");
+            bees[n] = b;
+            b.setPosition();
+            bees.push(b);
+        }
+        else  {
+            let h: honeyBee = new honeyBee(900, 550, "#FFFF00", "#FFD700");
+            bees[n] = h;
+            h.setPosition();
+            bees.push(h);
+        }
+
         n++;
     }
 

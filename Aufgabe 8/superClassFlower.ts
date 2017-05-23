@@ -1,5 +1,5 @@
 namespace Inheritance_A8 {
-    export class MovingShape {
+    export class superClassFlower {
         x: number;
         y: number;
         color: string;
