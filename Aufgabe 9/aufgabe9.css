@@ -1,0 +1,164 @@
+/* Aufgabe: Aufgabe 9 */
+/* Name: Jonathan Lingnau */
+/* Matrikel: 255645 */
+/* Datum: 30.05.17 */
+	
+/* Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe.  */
+/* Er wurde nicht kopiert und auch nicht diktiert. */
+
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
+
+body {
+	margin: 0 0 0 0;
+	font-family: Lobster;
+}
+
+header {
+	height: 70px;
+	background-color: white;
+	margin: -2em 0 0 0;
+}
+
+* {
+	display: block;
+	vertical-align: top
+}
+
+
+
+h1 {
+	padding: 0.5em 0 0 2.25em;
+	color: rgb(64,224,208);
+}
+
+#summe{
+	position: relative;
+	border: 1px solid black;
+	padding: 5px 5px 5px 5px;
+	margin: 1em 0 0 10%;
+	width: 80%;
+	background-color: white;
+}
+
+#background {
+	margin: -5em 0 0 0;
+	position:fixed;
+	height:100%;
+	width:100%;
+	z-index:-10;
+}
+
+#button {
+	border: 1px solid black;
+	margin: 1em 0 1em 23%;
+	font-family: Lobster;
+	height:30px;
+	width: 170px;
+	border-radius: 15px;
+	background-color: rgb(64,224,208);
+}
+
+input[type="radio"], input[type="checkbox"], label {
+	display: inline;
+}
+label::after {
+	content:"";
+	display: block;
+}
+head {
+	display: none;
+}
+input:invalid {
+	background: rgb(220,20,60);
+}
+input:valid {
+	background: white;
+}
+input:required {
+	background: white;
+}
+fieldset {
+	margin: 0 0 0 10%;
+	width: 75%;
+	background-color: white;
+}
+svg, figure, button, option {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+@media screen and (min-width: 1024px){
+
+header {
+	height: 70px;
+	background-color: white;
+	margin: -2em 0 0 0;
+}
+
+* {
+	display: block;
+	vertical-align: top
+}
+
+h1 {
+	padding: 0.5em 0 0 3em;
+	color: rgb(64,224,208);
+}
+
+#summe{
+	position: fixed;
+	border: 1px solid black;
+	padding: 5px 5px 5px 5px;
+	margin: 1em 0 0 80%;
+	background-color: white;
+}
+
+#background {
+	margin: -3.75em 0 0 0;
+	position:fixed;
+	width:100%;
+	z-index:-10;
+}
+
+#button {
+	border: 1px solid black;
+	margin: 1em 0 1em 80%;
+	font-family: Lobster;
+	height:30px;
+	width: 170px;
+	border-radius: 15px;
+	background-color: rgb(64,224,208);
+}
+
+input[type="radio"], input[type="checkbox"], label {
+	display: inline;
+}
+label::after {
+	content:"";
+	display: block;
+}
+head {
+	display: none;
+}
+input:invalid {
+	background: rgb(220,20,60);
+}
+input:valid {
+	background: white;
+}
+input:required {
+	background: white;
+}
+fieldset {
+	margin: 0 0 0 35%;
+	width: 300px;
+	background-color: white;
+}
+svg, figure, button, option {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+}

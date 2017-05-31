@@ -1,0 +1,93 @@
+<!-- Aufgabe: Aufgabe 9
+Name: Jonathan Lingnau
+Matrikel: 255645
+Datum: 30.05.17
+	
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+Er wurde nicht kopiert und auch nicht diktiert.
+ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<title>IceParadise</title>
+<link rel="stylesheet" href="aufgabe9.css" type="text/css"
+	media="screen" />
+<script src="aufgabe9.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<header><h1>IceParadise</h1></header>
+<body>
+
+	<img src="Hintergrund.jpg" id="background">
+
+	
+
+	<fieldset id="sorten">
+		<legend> Eissorten </legend>
+		
+		<input type="checkbox" name="Schokolade" value="Eis1" id="Eis1" />
+		<label for="Eis1">Schokolade</label> 
+		<input type="checkbox" name="Erdbeer" value="Eis2" id="Eis2" /> 
+		<label for="Eis2">Erdbeer</label> 
+		<input type="checkbox" name="Vanille" value="Eis3" id="Eis3" />
+		<label for="Eis3">Vanille</label>
+		<p>Eine Kugel = 1€</p>
+	</fieldset>
+	
+	<fieldset id="toppings">
+		<legend> Topping </legend>
+		<input type="checkbox" name="Schokostreusel" value="top1" id="top1" />
+		<label for="top1">Schokosteusel</label> 
+		<input type="checkbox" name="Zuckerstreusel" value="top2" id="top2" /> 
+		<label for="top2">Bunte Zuckerstreusel</label> 
+		<input type="checkbox" name="Schokosoße" value="top3" id="top3" />
+		<label for="top3">Schokosoße</label>
+		<p>Topping = 0,80€</p>
+	</fieldset>
+	
+	<fieldset id="fruits">
+		<legend> Früchte </legend>
+		<input type="checkbox" name="Erdbeeren" value="friut1" id="friut1" />
+		<label for="friut1">Erdbeeren</label> 
+		<input type="checkbox" name="Himbeeren" value="top2" id="top2" /> 
+		<label for="top2">Himbeeren</label> 
+		<input type="checkbox" name="Waldbeeren" value="top3" id="top3" />
+		<label for="top3">Waldbeeren</label>
+		<p>Früchte = 0,80€</p>
+	</fieldset>
+	
+	<fieldset id="cups">
+		<legend> Bitte wählen Sie ein Behälnis aus </legend>
+		<input type="radio" name="Cup" value="Waffel" id="cup1" /> 
+		<label for="cup1">Waffel</label> 
+		<input type="radio" name="Cup" value="Becher" id="cup2" /> 
+		<label for="cup2">Becher</label> 
+	</fieldset>
+
+	<fieldset id="info">
+		<legend> Lieferinformationen </legend>
+		Vorname <input type="text" name="vorname" placeholder="Vorname" required />
+		Nachname <input type="text" name="nachname" placeholder="Nachname" required />
+		Adresse <input type="text" name="Text" placeholder="Straße + Nr." required />
+		Postleitzahl <input type="text" name="Pattern" pattern="[0-9]{5}" placeholder="Postleitzahl"/>
+		Stadt <input type="text" name="Text" placeholder="Stadt" required />
+		<hr />
+		Versandart <br>
+		<input type="radio" name="Lieferung" value="express" id="l1" /> 
+		<label for="l1">Expresslieferung (innerhalb 30 Minuten)</label> 
+		<input type="radio" name="Lieferung" value="standard" id="l2" /> 
+		<label for="l2">Standardlieferung (bis zu 2 Stunden)</label> 
+		<hr />
+		Mail <input type="email" name="Mail" placeholder="place @ between" />
+		<hr />
+		Anmerkungen
+		<textarea name="Area" cols="25" rows="3" placeholder="Anmerkungen"></textarea>
+	</fieldset>
+	
+		<div id="summe"></div>
+		
+		<button name="Button" type="button" id="button">Bestellung abschicken!</button>
+
+</body>
+</html>
