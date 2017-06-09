@@ -210,4 +210,3 @@ var Classes_A7;
     }
 })(Classes_A7 || (Classes_A7 = {}));
 ;
-//# sourceMappingURL=aufgabe7.js.map

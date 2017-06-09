@@ -19,4 +19,3 @@ var Inheritance_A8;
     }());
     Inheritance_A8.superClassFlower = superClassFlower;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
-//# sourceMappingURL=superClassFlower.js.map

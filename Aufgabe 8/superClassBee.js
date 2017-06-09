@@ -72,4 +72,3 @@ var Inheritance_A8;
     }());
     Inheritance_A8.superClassBee = superClassBee;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
-//# sourceMappingURL=superClassBee.js.map

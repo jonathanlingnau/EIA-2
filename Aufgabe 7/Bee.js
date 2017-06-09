@@ -72,4 +72,3 @@ var Classes_A7;
     }());
     Classes_A7.Bee = Bee;
 })(Classes_A7 || (Classes_A7 = {}));
-//# sourceMappingURL=Bee.js.map

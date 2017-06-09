@@ -27,4 +27,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-//# sourceMappingURL=aufgabe3b.js.map

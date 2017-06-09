@@ -72,4 +72,3 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("sumWindow").style.top = (Event.clientY + 20) + "px";
     });
 });
-//# sourceMappingURL=aufgabe3a2.js.map

@@ -22,4 +22,3 @@ var Inheritance_A8;
     }(Inheritance_A8.superClassBee));
     Inheritance_A8.Bee = Bee;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
-//# sourceMappingURL=Bee.js.map

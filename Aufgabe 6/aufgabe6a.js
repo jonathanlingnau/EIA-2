@@ -322,4 +322,3 @@ var Canvas;
     }
 })(Canvas || (Canvas = {}));
 ;
-//# sourceMappingURL=aufgabe6a.js.map

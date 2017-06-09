@@ -222,4 +222,3 @@ var Canvas;
     }
 })(Canvas || (Canvas = {}));
 ;
-//# sourceMappingURL=aufgabe4.js.map

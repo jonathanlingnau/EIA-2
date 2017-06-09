@@ -226,4 +226,3 @@ var Inheritance_A8;
     }
 })(Inheritance_A8 || (Inheritance_A8 = {}));
 ;
-//# sourceMappingURL=aufgabe8.js.map

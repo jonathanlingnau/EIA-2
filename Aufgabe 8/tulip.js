@@ -51,4 +51,3 @@ var Inheritance_A8;
     }(Inheritance_A8.superClassFlower));
     Inheritance_A8.tulip = tulip;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
-//# sourceMappingURL=tulip.js.map

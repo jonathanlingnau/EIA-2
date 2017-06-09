@@ -47,4 +47,3 @@ document.addEventListener('DOMContentLoaded', function () {
         s.color = _fontColor;
     }
 });
-//# sourceMappingURL=aufgabe2.js.map

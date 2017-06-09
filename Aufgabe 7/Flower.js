@@ -111,4 +111,3 @@ var Classes_A7;
     }());
     Classes_A7.Flower = Flower;
 })(Classes_A7 || (Classes_A7 = {}));
-//# sourceMappingURL=Flower.js.map

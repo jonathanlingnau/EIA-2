@@ -70,4 +70,3 @@ var StudiVZ;
         }
     }
 })(StudiVZ || (StudiVZ = {}));
-//# sourceMappingURL=aufgabe6b.js.map

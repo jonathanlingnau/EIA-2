@@ -317,4 +317,3 @@ var Canvas;
     }
 })(Canvas || (Canvas = {}));
 ;
-//# sourceMappingURL=aufgabe5.js.map

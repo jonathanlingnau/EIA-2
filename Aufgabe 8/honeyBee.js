@@ -39,4 +39,3 @@ var Inheritance_A8;
     }(Inheritance_A8.superClassBee));
     Inheritance_A8.honeyBee = honeyBee;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
-//# sourceMappingURL=honeyBee.js.map
