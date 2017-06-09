@@ -32,12 +32,12 @@ h1 {
 	color: rgb(64,224,208);
 }
 
-#summe{
+#ausgabe{
 	position: relative;
 	border: 1px solid black;
 	padding: 5px 5px 5px 5px;
 	margin: 1em 0 0 10%;
-	width: 80%;
+	width: 77.5%;
 	background-color: white;
 }
 
@@ -107,12 +107,10 @@ h1 {
 	color: rgb(64,224,208);
 }
 
-#summe{
-	position: fixed;
-	border: 1px solid black;
-	padding: 5px 5px 5px 5px;
-	margin: 1em 0 0 80%;
-	background-color: white;
+#ausgabe{
+	width: 300px;
+	position: absolute;
+	margin: -90em 0 0 55em;
 }
 
 #background {
@@ -124,7 +122,7 @@ h1 {
 
 #button {
 	border: 1px solid black;
-	margin: 1em 0 1em 80%;
+	margin: 1em 0 1em 50px;
 	font-family: Lobster;
 	height:30px;
 	width: 170px;
