@@ -8,12 +8,12 @@
 var Canvas;
 (function (Canvas) {
     window.addEventListener("load", init);
-    var crc2;
-    var canvas;
-    var ImageData;
-    var bees = [];
-    var n = 10;
-    var elem = document.getElementsByTagName("canvas")[0];
+    let crc2;
+    let canvas;
+    let ImageData;
+    let bees = [];
+    let n = 10;
+    let elem = document.getElementsByTagName("canvas")[0];
     elem.addEventListener("click", addBee);
     elem.addEventListener("touchstart", addBee);
     function init(_event) {
@@ -33,26 +33,26 @@ var Canvas;
         drawCloud(180, 240);
         drawMountain(100, 420, "#696969");
         drawCloud(850, 100);
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let x;
+            let y;
             x = Math.round(Math.random() * 1000 + 30);
             y = Math.round(Math.random() * 300);
             drawCloud(x, y);
         }
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var c = void 0;
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let c;
+            let x;
+            let y;
             c = "#006400";
             x = Math.round(Math.random() * 850 + 10);
             y = Math.round(Math.random() * 250 + 470);
             drawBush(x, y, c);
         }
-        for (var i = 0; i < Math.round(Math.random() * 300); i++) {
-            var c = void 0;
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 300); i++) {
+            let c;
+            let x;
+            let y;
             c = "hsl(" + Math.round(Math.random() * 360) + "," + "100%," + "50%)";
             x = Math.round(Math.random() * 1250);
             y = Math.round(Math.random() * 340 + 420);
@@ -66,8 +66,8 @@ var Canvas;
         drawBienenkorb(910, 515);
         ImageData = crc2.getImageData(0, 0, 1270, 720);
         //  Biene
-        for (var i = 0; i < n; i++) {
-            var b = { x: 900, y: 550, color: "#FFFF00", pollen: "#FFD700" };
+        for (let i = 0; i < n; i++) {
+            let b = { x: 900, y: 550, color: "#FFFF00", pollen: "#FFD700" };
             //x[i] = 900;
             //y[i] = 550;
             bees[i] = b;
@@ -77,8 +77,8 @@ var Canvas;
     function animate() {
         console.log("Animate called");
         crc2.putImageData(ImageData, 0, 0);
-        for (var i = 0; i < n; i++) {
-            var b = bees[i];
+        for (let i = 0; i < n; i++) {
+            let b = bees[i];
             b.x += Math.random() * 4 - 3;
             b.y += Math.random() * 4 - 2;
             b.color = "#FFFF00";
@@ -322,3 +322,4 @@ var Canvas;
     }
 })(Canvas || (Canvas = {}));
 ;
+//# sourceMappingURL=aufgabe6a.js.map

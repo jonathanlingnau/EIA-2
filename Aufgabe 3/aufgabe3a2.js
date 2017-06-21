@@ -5,18 +5,18 @@
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
 document.addEventListener('DOMContentLoaded', function () {
-    var i = 0;
-    var n = 64;
-    var x = 1;
-    var c;
-    var d;
-    var zeile = 0;
-    for (var i_1 = 0; i_1 < n; i_1++) {
-        if (i_1 % 8 == 0) {
+    let i = 0;
+    let n = 64;
+    let x = 1;
+    let c;
+    let d;
+    let zeile = 0;
+    for (let i = 0; i < n; i++) {
+        if (i % 8 == 0) {
             zeile++;
         }
         if (zeile % 2 == 0) {
-            if (i_1 % 2 == 0) {
+            if (i % 2 == 0) {
                 c = "#ffffff";
                 d = "#000000";
             }
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         else {
-            if (i_1 % 2 == 1) {
+            if (i % 2 == 1) {
                 c = "#ffffff";
                 d = "#000000";
             }
@@ -39,36 +39,34 @@ document.addEventListener('DOMContentLoaded', function () {
         placeDiv(c, d);
     }
     function placeDiv(_color, _fontColor) {
-        var div = document.createElement("div");
+        let div = document.createElement("div");
         div.textContent = x.toString();
         document.body.appendChild(div);
-        var s = div.style;
+        let s = div.style;
         s.backgroundColor = _color;
         s.color = _fontColor;
     }
-    var getDivs = document.getElementsByTagName("div");
-    var divClicked = false;
-    var _loop_1 = function(i_2) {
-        getDivs[i_2].addEventListener("click", function () {
+    let getDivs = document.getElementsByTagName("div");
+    let divClicked = false;
+    for (let i = 0; i < 9; i++) {
+        getDivs[i].addEventListener("click", function () {
             if (divClicked == false) {
-                getDivs[i_2].style.border = "1px solid rgb(0,255,0)";
+                getDivs[i].style.border = "1px solid rgb(0,255,0)";
                 divClicked = true;
             }
             else {
-                getDivs[i_2].style.borderColor = "black";
+                getDivs[i].style.borderColor = "black";
                 divClicked = false;
             }
         });
-        for (var i_3 = 0; i_3 < 8; i_3++) {
-            x += Number(getDivs[i_3].textContent);
+        for (let i = 0; i < 8; i++) {
+            x += Number(getDivs[i].textContent);
             document.getElementById("sumWindow").textContent = "Dezimal: " + x.toString() + " ; " + "Hexadezimal: " + x.toString(16);
         }
-    };
-    for (var i_2 = 0; i_2 < 9; i_2++) {
-        _loop_1(i_2);
     }
     document.addEventListener("mousemove", function (Event) {
         document.getElementById("sumWindow").style.left = (Event.clientX + 15) + "px";
         document.getElementById("sumWindow").style.top = (Event.clientY + 20) + "px";
     });
 });
+//# sourceMappingURL=aufgabe3a2.js.map

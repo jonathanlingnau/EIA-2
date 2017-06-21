@@ -8,12 +8,12 @@
 var Classes_A7;
 (function (Classes_A7) {
     window.addEventListener("load", init);
-    var canvas;
-    var ImageData;
-    var bees = [];
-    var n = 10;
-    var flowers = [];
-    var flowerNumber = Math.round(Math.random() * 300);
+    let canvas;
+    let ImageData;
+    let bees = [];
+    let n = 10;
+    let flowers = [];
+    let flowerNumber = Math.round(Math.random() * 300);
     function init(_event) {
         canvas = document.getElementsByTagName("canvas")[0];
         canvas.addEventListener("click", addBee);
@@ -33,27 +33,27 @@ var Classes_A7;
         drawCloud(180, 240);
         drawMountain(100, 420, "#696969");
         drawCloud(850, 100);
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let x;
+            let y;
             x = Math.round(Math.random() * 1000 + 30);
             y = Math.round(Math.random() * 300);
             drawCloud(x, y);
         }
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var c = void 0;
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let c;
+            let x;
+            let y;
             c = "#006400";
             x = Math.round(Math.random() * 850 + 10);
             y = Math.round(Math.random() * 250 + 470);
             drawBush(x, y, c);
         }
-        for (var i = 0; i < Math.round(Math.random() * 220); i++) {
-            var y = 0;
-            var x = 0;
-            var color = "";
-            var f = new Classes_A7.Flower(x, y, color);
+        for (let i = 0; i < Math.round(Math.random() * 220); i++) {
+            let y = 0;
+            let x = 0;
+            let color = "";
+            let f = new Classes_A7.Flower(x, y, color);
             f.setRandomPosition();
             f.setRandomColor();
             if (i % 2 == 0) {
@@ -62,11 +62,11 @@ var Classes_A7;
             else
                 f.drawTulip();
         }
-        for (var i = 0; i < 10; i++) {
-            var y = 0;
-            var x = 0;
-            var color = "";
-            var fixedFlower = new Classes_A7.Flower(x, y, color);
+        for (let i = 0; i < 10; i++) {
+            let y = 0;
+            let x = 0;
+            let color = "";
+            let fixedFlower = new Classes_A7.Flower(x, y, color);
             fixedFlower.setRandomPosition();
             fixedFlower.setRandomColor();
             fixedFlower.drawTulip();
@@ -77,8 +77,8 @@ var Classes_A7;
         drawBienenkorb(910, 515);
         ImageData = Classes_A7.crc2.getImageData(0, 0, 1270, 720);
         // en        
-        for (var i = 0; i < n; i++) {
-            var b = new Classes_A7.Bee(900, 550, "#FFFF00", "#FFD700");
+        for (let i = 0; i < n; i++) {
+            let b = new Classes_A7.Bee(900, 550, "#FFFF00", "#FFD700");
             bees[i] = b;
         }
         window.setTimeout(animate, 20);
@@ -86,8 +86,8 @@ var Classes_A7;
     function animate() {
         console.log("Animate called");
         Classes_A7.crc2.putImageData(ImageData, 0, 0);
-        for (var i = 0; i < n; i++) {
-            var b = bees[i];
+        for (let i = 0; i < n; i++) {
+            let b = bees[i];
             b.update();
         }
         //        for (let i: number = 0; i < flowers.length; i++) {
@@ -96,7 +96,7 @@ var Classes_A7;
         window.setTimeout(animate, 20);
     }
     function addBee(_event) {
-        var b = new Classes_A7.Bee(900, 550, "#FFFF00", "#FFD700");
+        let b = new Classes_A7.Bee(900, 550, "#FFFF00", "#FFD700");
         b.setPosition();
         bees.push(b);
         n++;
@@ -210,3 +210,4 @@ var Classes_A7;
     }
 })(Classes_A7 || (Classes_A7 = {}));
 ;
+//# sourceMappingURL=aufgabe7.js.map

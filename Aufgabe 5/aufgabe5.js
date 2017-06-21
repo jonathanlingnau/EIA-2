@@ -8,13 +8,13 @@
 var Canvas;
 (function (Canvas) {
     window.addEventListener("load", init);
-    var crc2;
-    var canvas;
-    var ImageData;
-    var x = [];
-    var y = [];
-    var n = 10;
-    var elem = document.getElementsByTagName("canvas")[0];
+    let crc2;
+    let canvas;
+    let ImageData;
+    let x = [];
+    let y = [];
+    let n = 10;
+    let elem = document.getElementsByTagName("canvas")[0];
     elem.addEventListener("click", addBee);
     elem.addEventListener("touchstart", addBee);
     function init(_event) {
@@ -34,40 +34,40 @@ var Canvas;
         drawCloud(180, 240);
         drawMountain(100, 420, "#696969");
         drawCloud(850, 100);
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var x_1 = void 0;
-            var y_1 = void 0;
-            x_1 = Math.round(Math.random() * 1000 + 30);
-            y_1 = Math.round(Math.random() * 300);
-            drawCloud(x_1, y_1);
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let x;
+            let y;
+            x = Math.round(Math.random() * 1000 + 30);
+            y = Math.round(Math.random() * 300);
+            drawCloud(x, y);
         }
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var c = void 0;
-            var x_2 = void 0;
-            var y_2 = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let c;
+            let x;
+            let y;
             c = "#006400";
-            x_2 = Math.round(Math.random() * 850 + 10);
-            y_2 = Math.round(Math.random() * 250 + 470);
-            drawBush(x_2, y_2, c);
+            x = Math.round(Math.random() * 850 + 10);
+            y = Math.round(Math.random() * 250 + 470);
+            drawBush(x, y, c);
         }
-        for (var i = 0; i < Math.round(Math.random() * 300); i++) {
-            var c = void 0;
-            var x_3 = void 0;
-            var y_3 = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 300); i++) {
+            let c;
+            let x;
+            let y;
             c = "hsl(" + Math.round(Math.random() * 360) + "," + "100%," + "50%)";
-            x_3 = Math.round(Math.random() * 1250);
-            y_3 = Math.round(Math.random() * 340 + 420);
+            x = Math.round(Math.random() * 1250);
+            y = Math.round(Math.random() * 340 + 420);
             if (i % 2 == 0) {
-                drawFlower(x_3, y_3, c);
+                drawFlower(x, y, c);
             }
             else
-                drawTulip(x_3, y_3, c);
+                drawTulip(x, y, c);
         }
         drawTree(1100, 580);
         drawBienenkorb(910, 515);
         ImageData = crc2.getImageData(0, 0, 1270, 720);
         //  Biene
-        for (var i = 0; i < n; i++) {
+        for (let i = 0; i < n; i++) {
             x[i] = 900;
             y[i] = 550;
         }
@@ -76,7 +76,7 @@ var Canvas;
     function animate() {
         console.log("Animate called");
         crc2.putImageData(ImageData, 0, 0);
-        for (var i = 0; i < n; i++) {
+        for (let i = 0; i < n; i++) {
             x[i] += Math.random() * 4 - 3;
             y[i] += Math.random() * 4 - 2;
             if (x[i] < 0) {
@@ -317,3 +317,4 @@ var Canvas;
     }
 })(Canvas || (Canvas = {}));
 ;
+//# sourceMappingURL=aufgabe5.js.map

@@ -5,18 +5,18 @@
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst und in Zusammenarbeit mit Leonie Storz geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
 document.addEventListener('DOMContentLoaded', function () {
-    var i = 0;
-    var n = 64;
-    var x = 1;
-    var c;
-    var d;
-    var zeile = 0;
-    for (var i_1 = 0; i_1 < n; i_1++) {
-        if (i_1 % 8 == 0) {
+    let i = 0;
+    let n = 64;
+    let x = 1;
+    let c;
+    let d;
+    let zeile = 0;
+    for (let i = 0; i < n; i++) {
+        if (i % 8 == 0) {
             zeile++;
         }
         if (zeile % 2 == 0) {
-            if (i_1 % 2 == 0) {
+            if (i % 2 == 0) {
                 c = "#ffffff";
                 d = "#000000";
             }
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         else {
-            if (i_1 % 2 == 1) {
+            if (i % 2 == 1) {
                 c = "#ffffff";
                 d = "#000000";
             }
@@ -39,11 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
         placeDiv(c, d);
     }
     function placeDiv(_color, _fontColor) {
-        var div = document.createElement("div");
+        let div = document.createElement("div");
         div.textContent = x.toString();
         document.body.appendChild(div);
-        var s = div.style;
+        let s = div.style;
         s.backgroundColor = _color;
         s.color = _fontColor;
     }
 });
+//# sourceMappingURL=aufgabe2.js.map

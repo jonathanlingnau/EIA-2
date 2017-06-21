@@ -21,8 +21,8 @@ var StudiVZ;
         }
     }
     function saveData(_input) {
-        var inputArray = _input.split(",");
-        var s = {
+        let inputArray = _input.split(",");
+        let s = {
             matrikel: parseInt(inputArray[0]),
             name: (inputArray[1]),
             firstname: (inputArray[2]),
@@ -30,7 +30,7 @@ var StudiVZ;
             sex: parseInt(inputArray[4]) == 0,
             comment: (inputArray[5])
         };
-        var sex;
+        let sex;
         if (parseInt(inputArray[4]) == 0) {
             sex = "weiblich";
         }
@@ -53,9 +53,9 @@ var StudiVZ;
         return "Student " + "\n" + "\n" + "Name: " + s.name + "\nVorname: " + s.firstname + "\nMatrikelnummer: " + s.matrikel + "\nAlter: " + s.age + " Jahre" + "\nGeschlecht: " + sex + "\nKommentar: " + s.comment + "\n" + "\nwurde erfolgreich gespeichert";
     }
     function queryData(_matrikel) {
-        for (var i = 0; i < students.length; i++) {
+        for (let i = 0; i < students.length; i++) {
             if (students[i].matrikel == _matrikel) {
-                var sex = void 0;
+                let sex;
                 if (students[i].sex == false) {
                     sex = "männlich";
                 }
@@ -70,3 +70,4 @@ var StudiVZ;
         }
     }
 })(StudiVZ || (StudiVZ = {}));
+//# sourceMappingURL=aufgabe6b.js.map

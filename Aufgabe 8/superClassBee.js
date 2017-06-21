@@ -7,8 +7,8 @@
 //Er wurde nicht kopiert und auch nicht diktiert.
 var Inheritance_A8;
 (function (Inheritance_A8) {
-    var superClassBee = (function () {
-        function superClassBee(_x, _y, _color, _pollen) {
+    class superClassBee {
+        constructor(_x, _y, _color, _pollen) {
             //this.setRandomStyle();
             this.setPosition();
             this.x = _x;
@@ -16,11 +16,11 @@ var Inheritance_A8;
             this.color = _color;
             this.pollen = _pollen;
         }
-        superClassBee.prototype.update = function () {
+        update() {
             this.move();
             this.draw();
-        };
-        superClassBee.prototype.draw = function () {
+        }
+        draw() {
             Inheritance_A8.crc2.beginPath();
             Inheritance_A8.crc2.strokeStyle = "#000000";
             Inheritance_A8.crc2.fillStyle = "#000000";
@@ -47,8 +47,8 @@ var Inheritance_A8;
             //Pollen
             Inheritance_A8.crc2.fillStyle = this.pollen;
             Inheritance_A8.crc2.fillRect(this.x - 3, this.y + 5, 5, 5);
-        };
-        superClassBee.prototype.move = function () {
+        }
+        move() {
             this.x += Math.random() * 4 - 3;
             this.y += Math.random() * 4 - 2;
             if (this.x < 0) {
@@ -63,12 +63,12 @@ var Inheritance_A8;
             if (this.y > Inheritance_A8.crc2.canvas.height) {
                 this.y = 0;
             }
-        };
-        superClassBee.prototype.setPosition = function () {
+        }
+        setPosition() {
             this.x = 900;
             this.y = 550;
-        };
-        return superClassBee;
-    }());
+        }
+    }
     Inheritance_A8.superClassBee = superClassBee;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
+//# sourceMappingURL=superClassBee.js.map

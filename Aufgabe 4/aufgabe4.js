@@ -1,9 +1,9 @@
 var Canvas;
 (function (Canvas) {
     window.addEventListener("load", init);
-    var crc2;
+    let crc2;
     function init(_event) {
-        var canvas;
+        let canvas;
         canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
         crc2 = canvas.getContext("2d");
@@ -20,26 +20,26 @@ var Canvas;
         drawCloud(180, 240);
         drawMountain(100, 420, "#696969");
         drawCloud(850, 100);
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let x;
+            let y;
             x = Math.round(Math.random() * 1000 + 30);
             y = Math.round(Math.random() * 300);
             drawCloud(x, y);
         }
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var c = void 0;
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let c;
+            let x;
+            let y;
             c = "#006400";
             x = Math.round(Math.random() * 850 + 10);
             y = Math.round(Math.random() * 250 + 470);
             drawBush(x, y, c);
         }
-        for (var i = 0; i < Math.round(Math.random() * 300); i++) {
-            var c = void 0;
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 300); i++) {
+            let c;
+            let x;
+            let y;
             c = "hsl(" + Math.round(Math.random() * 360) + "," + "100%," + "50%)";
             x = Math.round(Math.random() * 1250);
             y = Math.round(Math.random() * 340 + 420);
@@ -222,3 +222,4 @@ var Canvas;
     }
 })(Canvas || (Canvas = {}));
 ;
+//# sourceMappingURL=aufgabe4.js.map

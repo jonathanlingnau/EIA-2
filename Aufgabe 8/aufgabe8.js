@@ -8,12 +8,12 @@
 var Inheritance_A8;
 (function (Inheritance_A8) {
     window.addEventListener("load", init);
-    var canvas;
-    var ImageData;
+    let canvas;
+    let ImageData;
     Inheritance_A8.bees = [];
     Inheritance_A8.n = 10;
     Inheritance_A8.flowers = [];
-    var flowerNumber = Math.round(Math.random() * 300);
+    let flowerNumber = Math.round(Math.random() * 300);
     function init(_event) {
         canvas = document.getElementsByTagName("canvas")[0];
         console.log(canvas);
@@ -33,28 +33,28 @@ var Inheritance_A8;
         drawCloud(180, 240);
         drawMountain(100, 420, "#696969");
         drawCloud(850, 100);
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let x;
+            let y;
             x = Math.round(Math.random() * 1000 + 30);
             y = Math.round(Math.random() * 300);
             drawCloud(x, y);
         }
-        for (var i = 0; i < Math.round(Math.random() * 3); i++) {
-            var c = void 0;
-            var x = void 0;
-            var y = void 0;
+        for (let i = 0; i < Math.round(Math.random() * 3); i++) {
+            let c;
+            let x;
+            let y;
             c = "#006400";
             x = Math.round(Math.random() * 850 + 10);
             y = Math.round(Math.random() * 250 + 470);
             drawBush(x, y, c);
         }
-        for (var i = 0; i < Math.round(Math.random() * 200); i++) {
-            var y = 0;
-            var x = 0;
-            var color = "";
-            var f = new Inheritance_A8.Flower(x, y, color);
-            var t = new Inheritance_A8.tulip(x, y, color);
+        for (let i = 0; i < Math.round(Math.random() * 200); i++) {
+            let y = 0;
+            let x = 0;
+            let color = "";
+            let f = new Inheritance_A8.Flower(x, y, color);
+            let t = new Inheritance_A8.tulip(x, y, color);
             f.setRandomPosition();
             f.setRandomColor();
             if (i % 2 == 0) {
@@ -63,11 +63,11 @@ var Inheritance_A8;
             else
                 t.drawTulip();
         }
-        for (var i = 0; i < Math.round(Math.random() * 60); i++) {
-            var y = 0;
-            var x = 0;
-            var color = "";
-            var fixedFlower = new Inheritance_A8.Flower(x, y, color);
+        for (let i = 0; i < Math.round(Math.random() * 60); i++) {
+            let y = 0;
+            let x = 0;
+            let color = "";
+            let fixedFlower = new Inheritance_A8.Flower(x, y, color);
             fixedFlower.setRandomPosition();
             fixedFlower.setRandomColor();
             fixedFlower.drawFlower();
@@ -78,13 +78,13 @@ var Inheritance_A8;
         drawBienenkorb(910, 515);
         ImageData = Inheritance_A8.crc2.getImageData(0, 0, 1270, 720);
         // Biene      
-        for (var i = 0; i < Inheritance_A8.n; i++) {
+        for (let i = 0; i < Inheritance_A8.n; i++) {
             if (i % 2 == 0) {
-                var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
+                let b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
                 Inheritance_A8.bees[i] = b;
             }
             else {
-                var h = new Inheritance_A8.honeyBee(900, 550, "#FFFF00", "#FFD700");
+                let h = new Inheritance_A8.honeyBee(900, 550, "#FFFF00", "#FFD700");
                 Inheritance_A8.bees[i] = h;
             }
         }
@@ -93,8 +93,8 @@ var Inheritance_A8;
     function animate() {
         console.log("Animate called");
         Inheritance_A8.crc2.putImageData(ImageData, 0, 0);
-        for (var i = 0; i < Inheritance_A8.n; i++) {
-            var b = Inheritance_A8.bees[i];
+        for (let i = 0; i < Inheritance_A8.n; i++) {
+            let b = Inheritance_A8.bees[i];
             b.update();
         }
         //        for (let i: number = 0; i < flowers.length; i++) {
@@ -104,13 +104,13 @@ var Inheritance_A8;
     }
     function addBee(_event) {
         if (Inheritance_A8.n % 2 == 0) {
-            var b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
+            let b = new Inheritance_A8.Bee(900, 550, "#FFFF00", "#FFD700");
             Inheritance_A8.bees[Inheritance_A8.n] = b;
             b.setPosition();
             Inheritance_A8.bees.push(b);
         }
         else {
-            var h = new Inheritance_A8.honeyBee(900, 550, "#FFFF00", "#FFD700");
+            let h = new Inheritance_A8.honeyBee(900, 550, "#FFFF00", "#FFD700");
             Inheritance_A8.bees[Inheritance_A8.n] = h;
             h.setPosition();
             Inheritance_A8.bees.push(h);
@@ -226,3 +226,4 @@ var Inheritance_A8;
     }
 })(Inheritance_A8 || (Inheritance_A8 = {}));
 ;
+//# sourceMappingURL=aufgabe8.js.map

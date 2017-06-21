@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var i = 0;
-    var n = 64;
-    var x = 1;
-    var c;
-    var d;
-    var zeile = 0;
-    var divSelected;
-    var sum = 0;
-    for (var i_1 = 0; i_1 < n; i_1++) {
-        if (i_1 % 8 == 0) {
+    let i = 0;
+    let n = 64;
+    let x = 1;
+    let c;
+    let d;
+    let zeile = 0;
+    let divSelected;
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        if (i % 8 == 0) {
             zeile++;
         }
         if (zeile % 2 == 0) {
-            if (i_1 % 2 == 0) {
+            if (i % 2 == 0) {
                 c = "#ffffff";
                 d = "#000000";
             }
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         else {
-            if (i_1 % 2 == 1) {
+            if (i % 2 == 1) {
                 c = "#ffffff";
                 d = "#000000";
             }
@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         x = x * 2;
-        placeDiv(c, d, i_1, x);
+        placeDiv(c, d, i, x);
     }
     function placeDiv(_color, _fontColor, _id, value) {
         divSelected.push(false);
-        var div = document.createElement("div");
+        let div = document.createElement("div");
         div.textContent = value.toString();
         document.body.appendChild(div);
-        var s = div.style;
+        let s = div.style;
         s.backgroundColor = _color;
         s.color = _fontColor;
         //        div.addEventListener("click", function () : void {
@@ -64,3 +64,4 @@ document.addEventListener('DOMContentLoaded', function () {
     //    });
     //    
 });
+//# sourceMappingURL=aufgabe3A.js.map

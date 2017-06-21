@@ -5,17 +5,11 @@
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
 var Inheritance_A8;
 (function (Inheritance_A8) {
-    var Flower = (function (_super) {
-        __extends(Flower, _super);
-        function Flower(_x, _y, _color) {
-            _super.call(this, _x, _y, _color);
+    class Flower extends Inheritance_A8.superClassFlower {
+        constructor(_x, _y, _color) {
+            super(_x, _y, _color);
             //this.setRandomFlower();
             this.setRandomColor();
             _color = this.color;
@@ -23,7 +17,7 @@ var Inheritance_A8;
             _x = this.x;
             _y = this.y;
         }
-        Flower.prototype.drawFlower = function () {
+        drawFlower() {
             //Stiel
             Inheritance_A8.crc2.beginPath();
             Inheritance_A8.crc2.moveTo(this.x, this.y);
@@ -81,8 +75,8 @@ var Inheritance_A8;
             //          crc2.lineWidth = 1;
             Inheritance_A8.crc2.lineJoin = "round";
             Inheritance_A8.crc2.fill();
-        };
-        return Flower;
-    }(Inheritance_A8.superClassFlower));
+        }
+    }
     Inheritance_A8.Flower = Flower;
 })(Inheritance_A8 || (Inheritance_A8 = {}));
+//# sourceMappingURL=Flower.js.map

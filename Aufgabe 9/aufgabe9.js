@@ -8,17 +8,17 @@
 var Form;
 (function (Form) {
     window.addEventListener("load", init);
-    var eissorten = ["Vanille", "Schokolade", "Erdbeere", "Himbeere", "Zitrone", "Banane", "Mocca", "Cookies", "Mango", "Haselnuss", "Straciatella", "Nougat", "Kirsche", "Joghurt", "Pistazie"];
-    var toppings = ["Sahne", "Schokostreusel", "Bunte Zuckerstreusel", "Erdbeersoße", "Schokosoße"];
-    var cups = ["Waffel", "Becher"];
-    var iceInput = [];
-    var toppingsInput = [];
-    var cupsInput = [];
-    var Eissorten;
-    var Toppings;
-    var Behaelter;
-    var Ausgabe;
-    var Button;
+    let eissorten = ["Vanille", "Schokolade", "Erdbeere", "Himbeere", "Zitrone", "Banane", "Mocca", "Cookies", "Mango", "Haselnuss", "Straciatella", "Nougat", "Kirsche", "Joghurt", "Pistazie"];
+    let toppings = ["Sahne", "Schokostreusel", "Bunte Zuckerstreusel", "Erdbeersoße", "Schokosoße"];
+    let cups = ["Waffel", "Becher"];
+    let iceInput = [];
+    let toppingsInput = [];
+    let cupsInput = [];
+    let Eissorten;
+    let Toppings;
+    let Behaelter;
+    let Ausgabe;
+    let Button;
     function init(_event) {
         Eissorten = document.getElementById("sorten");
         Toppings = document.getElementById("toppings");
@@ -30,19 +30,19 @@ var Form;
         Behaelter.addEventListener("change", change);
     }
     function createInputs() {
-        for (var i = 0; i < eissorten.length; i++) {
+        for (let i = 0; i < eissorten.length; i++) {
             createCounter(eissorten[i]);
         }
-        for (var i = 0; i < toppings.length; i++) {
+        for (let i = 0; i < toppings.length; i++) {
             createCheckbox(toppings[i]);
         }
-        for (var i = 0; i < cups.length; i++) {
+        for (let i = 0; i < cups.length; i++) {
             createRadio(cups[i]);
         }
     }
     function createCounter(_eis) {
-        var input = document.createElement("input");
-        var label = document.createElement("label");
+        let input = document.createElement("input");
+        let label = document.createElement("label");
         label.innerText = _eis;
         label.appendChild(input);
         input.type = "number";
@@ -52,8 +52,8 @@ var Form;
         iceInput.push(input);
     }
     function createCheckbox(_topping) {
-        var input = document.createElement("input");
-        var label = document.createElement("label");
+        let input = document.createElement("input");
+        let label = document.createElement("label");
         label.innerText = _topping;
         label.appendChild(input);
         input.type = "checkbox";
@@ -61,8 +61,8 @@ var Form;
         toppingsInput.push(input);
     }
     function createRadio(_behaelter) {
-        var input = document.createElement("input");
-        var label = document.createElement("label");
+        let input = document.createElement("input");
+        let label = document.createElement("label");
         label.innerText = _behaelter;
         label.appendChild(input);
         input.type = "radio";
@@ -71,11 +71,11 @@ var Form;
         cupsInput.push(input);
     }
     function change() {
-        var summe = 0;
-        for (var i = 0; i < iceInput.length; i++) {
+        let summe = 0;
+        for (let i = 0; i < iceInput.length; i++) {
             summe += parseInt(iceInput[i].value);
         }
-        for (var i = 0; i < toppingsInput.length; i++) {
+        for (let i = 0; i < toppingsInput.length; i++) {
             if (toppingsInput[i].checked) {
                 summe += 0.8;
             }
@@ -87,17 +87,17 @@ var Form;
         document.getElementById("selectedToppings").innerText = "";
         document.getElementById("selectedFruits").innerText = "";
         document.getElementById("SelectedCup").innerText = "";
-        for (var i = 0; i < iceInput.length; i++) {
+        for (let i = 0; i < iceInput.length; i++) {
             if (parseInt(iceInput[i].value) > 0) {
                 document.getElementById("selectedIce").innerText += eissorten[i] + " " + ": " + (parseInt(iceInput[i].value) * 1) + "\n";
             }
         }
-        for (var i = 0; i < toppingsInput.length; i++) {
+        for (let i = 0; i < toppingsInput.length; i++) {
             if (toppingsInput[i].checked) {
                 document.getElementById("selectedToppings").innerText += toppings[i] + " 0.80 Euro" + "\n";
             }
         }
-        for (var i = 0; i < cupsInput.length; i++) {
+        for (let i = 0; i < cupsInput.length; i++) {
             if (cupsInput[i].checked) {
                 document.getElementById("SelectedCup").innerText += cups[i] + "\n";
             }
@@ -106,3 +106,4 @@ var Form;
         document.getElementById("Summe").innerText = _summe.toString() + " Euro";
     }
 })(Form || (Form = {}));
+//# sourceMappingURL=aufgabe9.js.map

@@ -7,8 +7,8 @@
 //Er wurde nicht kopiert und auch nicht diktiert.
 var Classes_A7;
 (function (Classes_A7) {
-    var Bee = (function () {
-        function Bee(x, y, _color, _pollen) {
+    class Bee {
+        constructor(x, y, _color, _pollen) {
             //this.setRandomStyle();
             this.setPosition();
             this.x = x;
@@ -16,11 +16,11 @@ var Classes_A7;
             this.color = _color;
             this.pollen = _pollen;
         }
-        Bee.prototype.update = function () {
+        update() {
             this.move();
             this.draw();
-        };
-        Bee.prototype.draw = function () {
+        }
+        draw() {
             Classes_A7.crc2.beginPath();
             Classes_A7.crc2.strokeStyle = "#000000";
             Classes_A7.crc2.fillStyle = "#000000";
@@ -47,8 +47,8 @@ var Classes_A7;
             //Pollen
             Classes_A7.crc2.fillStyle = this.pollen;
             Classes_A7.crc2.fillRect(this.x - 3, this.y + 5, 5, 5);
-        };
-        Bee.prototype.move = function () {
+        }
+        move() {
             this.x += Math.random() * 4 - 3;
             this.y += Math.random() * 4 - 2;
             if (this.x < 0) {
@@ -63,12 +63,12 @@ var Classes_A7;
             if (this.y > Classes_A7.crc2.canvas.height) {
                 this.y = 0;
             }
-        };
-        Bee.prototype.setPosition = function () {
+        }
+        setPosition() {
             this.x = 900;
             this.y = 550;
-        };
-        return Bee;
-    }());
+        }
+    }
     Classes_A7.Bee = Bee;
 })(Classes_A7 || (Classes_A7 = {}));
+//# sourceMappingURL=Bee.js.map
