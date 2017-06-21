@@ -1,0 +1,92 @@
+<!-- Aufgabe: Aufgabe 10
+Name: Jonathan Lingnau
+Matrikel: 255645
+Datum: 21.06.17
+	
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+Er wurde nicht kopiert und auch nicht diktiert.
+ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<title>IceParadise</title>
+<link rel="stylesheet" href="aufgabe9.css" type="text/css" media="screen" />
+<script src="aufgabe9.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<!--  -->
+	<form action="http://localhost:8100" method="get">
+	<!--  - ->
+	<form action="https://iceparadise.herokuapp.com" method="get">
+	<!--  -->
+
+<header>
+	<h1>IceParadise</h1>
+</header>
+<body>
+
+	<img src="Hintergrund.jpg" id="background">
+
+
+
+	
+	<fieldset id="sorten">
+		<legend class="titelkasten">Eissorten<br>Unsere Eissorten – je 1€ </legend>
+		 
+	</fieldset>
+
+	<fieldset id="toppings">
+		<legend class="titelkasten">Toppings<br>Unsere Toppings – je 0.80€ </legend>
+		 
+	</fieldset>
+
+	<fieldset id="cups">
+		<legend class="titelkasten"> Behälter</legend>
+	</fieldset>
+
+	<fieldset id="info">
+		<legend> Lieferinformationen </legend>
+		Vorname <input id="firstname" type="text" name="Vorname" placeholder="Vorname"
+			required /> 
+		Nachname <input id="name" type="text" name="nachname"
+			placeholder="Nachname" required /> 
+		Adresse <input id="adress" type="text"
+			name="Adresse" placeholder="Straße + Nr." required /> 
+		Postleitzahl <input id="plz"
+			type="text" name="plz" pattern="[0-9]{5}"
+			placeholder="Postleitzahl" /> 
+		Stadt <input id="city" type="text" name="Stadt"
+			placeholder="Stadt" required />
+		<hr />
+		Versandart <br> <input type="radio" name="Versandart"
+			value="express" id="l1" /> <label for="l1">Expresslieferung
+			(innerhalb 30 Minuten)</label> <input type="radio" name="Lieferung"
+			value="standard" id="l2" /> <label for="l2">Standardlieferung
+			(bis zu 3 Stunden)</label>
+		<hr />
+		Mail <input id="mail" type="email" name="Mail" placeholder="place @ between" />
+		<hr />
+		Anmerkungen
+		<textarea id="comment" name="Anmerkungen" cols="25" rows="3" placeholder="Anmerkungen"></textarea>
+	</fieldset>
+
+	<fieldset id="ausgabe">
+		<legend> Ihre Bestellung </legend>
+		<p class="text">Eissorten:</p>
+		<p id="selectedIce"></p>
+		<p class="text">Toppings:</p>
+		<p id="selectedToppings"></p>
+		<p class="text">Früchte:</p>
+		<p id="selectedFruits"></p>
+		<p class="text">Behälter:</p>
+		<p id="SelectedCup"></p>
+		<h2>Summe:</h2>
+		<p id="Summe"></p>
+		<button type="submit">Bestellung abschicken!</button>
+	</fieldset>
+
+
+</body>
+</html>
