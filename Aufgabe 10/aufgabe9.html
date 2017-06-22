@@ -17,7 +17,6 @@ Er wurde nicht kopiert und auch nicht diktiert.
 </head>
 
 <!--  -->
-	<form action="http://localhost:8100" method="get">
 	<!--  - ->
 	<form action="https://iceparadise.herokuapp.com" method="get">
 	<!--  -->
@@ -28,6 +27,9 @@ Er wurde nicht kopiert und auch nicht diktiert.
 <body>
 
 	<img src="Hintergrund.jpg" id="background">
+	
+	
+	<form action="http://localhost:8100" method="get">
 
 
 
@@ -50,7 +52,7 @@ Er wurde nicht kopiert und auch nicht diktiert.
 		<legend> Lieferinformationen </legend>
 		Vorname <input id="firstname" type="text" name="Vorname" placeholder="Vorname"
 			required /> 
-		Nachname <input id="name" type="text" name="nachname"
+		Nachname <input id="name" type="text" name="Nachname"
 			placeholder="Nachname" required /> 
 		Adresse <input id="adress" type="text"
 			name="Adresse" placeholder="Straße + Nr." required /> 
@@ -61,9 +63,9 @@ Er wurde nicht kopiert und auch nicht diktiert.
 			placeholder="Stadt" required />
 		<hr />
 		Versandart <br> <input type="radio" name="Versandart"
-			value="express" id="l1" /> <label for="l1">Expresslieferung
-			(innerhalb 30 Minuten)</label> <input type="radio" name="Lieferung"
-			value="standard" id="l2" /> <label for="l2">Standardlieferung
+			value="Expresslieferung" id="l1" /> <label for="l1">Expresslieferung
+			(innerhalb 30 Minuten)</label> <input type="radio" name="Versandart"
+			value="Standardlieferung" id="l2" /> <label for="l2">Standardlieferung
 			(bis zu 3 Stunden)</label>
 		<hr />
 		Mail <input id="mail" type="email" name="Mail" placeholder="place @ between" />
@@ -86,7 +88,7 @@ Er wurde nicht kopiert und auch nicht diktiert.
 		<p id="Summe"></p>
 		<button type="submit">Bestellung abschicken!</button>
 	</fieldset>
-
+</form>
 
 </body>
 </html>

@@ -109,8 +109,9 @@ h1 {
 
 #ausgabe{
 	width: 300px;
-	position: absolute;
+	position: fixed;
 	margin: -90em 0 0 55em;
+	z-index: 1000;
 }
 
 #background {

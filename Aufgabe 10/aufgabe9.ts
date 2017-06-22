@@ -1,7 +1,7 @@
-//Aufgabe: Aufgabe 9
+//Aufgabe: 10
 //Name: Jonathan Lingnau
 //Matrikel: 255645
-//Datum: 30.05.17
+//Datum: 21.06.17
 //    
 //Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
 //Er wurde nicht kopiert und auch nicht diktiert.
@@ -61,7 +61,7 @@ namespace Form {
         input.type = "number";
         input.min = "0";
         input.value = "0";
-
+        input.name = _eis;
 
         Eissorten.appendChild(label);
         iceInput.push(input);
@@ -76,7 +76,8 @@ namespace Form {
         label.innerText = _topping;
         label.appendChild(input);
         input.type = "checkbox";
-     
+        input.name = _topping;
+        
         
         Toppings.appendChild(label);
         toppingsInput.push(input);
@@ -92,8 +93,9 @@ namespace Form {
         label.appendChild(input);
         input.type = "radio";
         input.required = true;
-       
-
+        input.name = "behaelter";
+        input.value = _behaelter;
+        
         Behaelter.appendChild(label);
         cupsInput.push(input);
 } 
